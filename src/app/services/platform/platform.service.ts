@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Platform } from '@ionic/angular'
-import { Device } from '@ionic-native/device';
+import { Device } from '@ionic-native/device/ngx';
 import { LoggerService } from '../logger/logger.service';
 
 @Injectable({
