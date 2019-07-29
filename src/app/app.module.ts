@@ -36,9 +36,10 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
 }
 
 // export class MyMissingTranslationHandler implements MissingTranslationHandler {
-//   public parser: TranslateParser = translateParserFactory();
+//   public parser: TranslateParser = new InterpolatedTranslateParser();
 //   public handle(params: MissingTranslationHandlerParams) {
-//     return this.parser.interpolate(params.key, params.interpolateParams);
+//     return this.parser.interpolate(params.key, params.interpolateParams)
+//     // return params;
 //   }
 // }
 
@@ -46,7 +47,7 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
   declarations: [AppComponent, CopyToClipboardDirective],
   entryComponents: [],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     IonicModule.forRoot(), 
     AppRoutingModule,
     HttpClientModule,
@@ -80,7 +81,7 @@ export class AppModule {}
 // 4、test module
 // 5、environments module
 // 6、国际化 👌
-// 7、复制粘贴
+// 7、复制粘贴 👌
 // 8、自适应
 // 9、长按
 // 10、跳转第三方网页或app
