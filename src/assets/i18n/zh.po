@@ -14,35 +14,9 @@ msgstr ""
 "Language: zh\n"
 "PO-Revision-Date: 2018-12-21 18:55\n"
 
-msgid "Wallet"
-msgstr "钱包"
-
-msgid "My"
-msgstr "我的"
-
-msgid "Market"
-msgstr "行情"
-
-msgid "News"
-msgstr "资讯"
-
-msgid "privateKey"
-msgstr "私钥"
-
-msgid "seedWords"
-msgstr "助记词"
-
-msgid "keyStore"
-msgstr "Keystore"
-
-msgid "ContactList"
-msgstr "联系人"
-
-msgid "Reset"
-msgstr "重置"
-
-msgid "Change Language"
-msgstr "切换语言"
+#ion-header
+msgid "Back"
+msgstr "返回"
 
 #tab one
 msgid "Tab One"
@@ -85,3 +59,18 @@ msgstr "测试页面"
 #tab three
 msgid "Tab Three"
 msgstr "叁"
+
+#page test
+msgid "Test"
+msgstr "测试"
+
+#page internationlization
+msgid "Select Language"
+msgstr "选择语言"
+
+#ion-select
+msgid "Okay"
+msgstr "好的"
+
+msgid "Dismiss"
+msgstr "否"

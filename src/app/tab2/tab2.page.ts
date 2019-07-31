@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 import { LanguageService } from '../services/language/language.service';
 import { LoggerService } from '../services/logger/logger.service';
@@ -17,7 +18,8 @@ export class Tab2Page {
     private logger: LoggerService,
     private language: LanguageService,
     private translate: TranslateService,
-    private menu: MenuController
+    private menu: MenuController,
+    private router: Router
   ) {
   }
   
@@ -41,6 +43,14 @@ export class Tab2Page {
   public openSideMenu() {
     this.menu.enable(true, 'custom');
     this.menu.open('custom');
+  }
+
+  public jumpToInternationlization() {
+    this.router.navigate(['internationalization'], {
+      'queryParams': {
+        'val': 'this is a param from router.'
+      }
+    })
   }
 
   public testPress($event) {

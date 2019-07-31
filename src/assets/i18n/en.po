@@ -12,39 +12,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: en\n"
 
-#  new
-msgid "Wallet"
-msgstr "wallet"
-
-msgid "Input Your Password"
-msgstr "Input Your Password"
-
-msgid "Payment Info"
-msgstr "Payment Info"
-
-msgid "Quantity"
-msgstr "Quantity"
-
-msgid "Receiving"
-msgstr "Receiving"
-
-msgid "Sending From"
-msgstr "Sending From"
-
-msgid "Confirm Payment"
-msgstr "Confirm Payment"
-
-msgid "Mining Fee"
-msgstr "Mining Fee"
-
-msgid "Wallet Password"
-msgstr "Wallet Password"
-
-msgid "Success"
-msgstr "Success"
-
-msgid "Change Language"
-msgstr "change language"
+#ion-header
+msgid "Back"
+msgstr "Back"
 
 #tab one
 msgid "Tab One"
@@ -87,3 +57,18 @@ msgstr "Test Page"
 #tab three
 msgid "Tab Three"
 msgstr "Tab Three"
+
+#page test
+msgid "Test"
+msgstr "Test"
+
+#page internationlization
+msgid "Select Language"
+msgstr "Select Language"
+
+#ion-select
+msgid "Okay"
+msgstr "Okay"
+
+msgid "Dismiss"
+msgstr "Dismiss"

@@ -11,15 +11,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none" padding>
+  <ion-list lines="inset">
     <ion-list-header>
       <ion-label translate>Basic Services</ion-label>
     </ion-list-header>
-    <ion-item (click)="changeLanguage()" detail="true">
+    <ion-item [routerLink]="['/internationalization']" detail="true">
       <ion-icon slot="start" src="assets/img/internationalization.svg"></ion-icon>
       <ion-label translate>Internationalization</ion-label>
     </ion-item>
-    <ion-item (click)="testLogger()" detail="true">
+    <ion-item [routerLink]="['/test']" detail="true">
       <ion-icon slot="start" src="assets/img/test.svg"></ion-icon>
       <ion-label translate>Test Page</ion-label>
     </ion-item>
