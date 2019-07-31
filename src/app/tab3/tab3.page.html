@@ -1,8 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
+    <ion-title translate>Tab Three</ion-title>
+    <ion-buttons slot="end">
+      <span (click)="changeLanguage()">
+        <ion-icon *ngIf="currentLang === 'zh'" src="assets/img/zhongyingwenqiehuan-zh.svg"></ion-icon>
+        <ion-icon *ngIf="currentLang === 'en'" src="assets/img/zhongyingwenqiehuan-en.svg"></ion-icon>
+      </span>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

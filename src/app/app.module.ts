@@ -8,8 +8,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import {
-  MissingTranslationHandler,
-  MissingTranslationHandlerParams,
+  // MissingTranslationHandler,
+  // MissingTranslationHandlerParams,
   TranslateDefaultParser,
   TranslateLoader,
   TranslateModule,
@@ -83,7 +83,7 @@ export class AppModule {}
 // 6、国际化 👌
 // 7、复制粘贴 👌
 // 8、自适应
-// 9、长按
+// 9、手势
 // 10、跳转第三方网页或app
 // 11、弹出框
 // 12、版本更新
@@ -108,4 +108,4 @@ export class AppModule {}
 // 31、指纹模块
 // 32、特定格式验证（邮箱，手机号，各类号码）
 // 33、键盘配置
-// 34、
+// 34、主题切换

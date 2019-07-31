@@ -43,3 +43,45 @@ msgstr "重置"
 
 msgid "Change Language"
 msgstr "切换语言"
+
+#tab one
+msgid "Tab One"
+msgstr "壹"
+
+msgid "Get Started"
+msgstr "开始吧"
+
+msgid "Welcome to Ionic"
+msgstr "欢迎使用Ionic"
+
+msgid "Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps."
+msgstr "现在您的应用已经创建，您将需要开始构建功能和组件。 查看下面的一些资源以了解后续步骤。"
+
+msgid "Resources"
+msgstr "资源"
+
+msgid "Ionic Documentation"
+msgstr "Ionic文档"
+
+msgid "Change Your App Layout"
+msgstr "更改您的应用布局"
+
+msgid "Theme Your App"
+msgstr "设置您的主题"
+
+#tab two
+msgid "Tab Two"
+msgstr "貳"
+
+msgid "Basic Services"
+msgstr "基础服务"
+
+msgid "Internationalization"
+msgstr "国际化"
+
+msgid "Test Page"
+msgstr "测试页面"
+
+#tab three
+msgid "Tab Three"
+msgstr "叁"

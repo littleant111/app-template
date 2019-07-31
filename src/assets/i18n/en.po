@@ -45,3 +45,45 @@ msgstr "Success"
 
 msgid "Change Language"
 msgstr "change language"
+
+#tab one
+msgid "Tab One"
+msgstr "Tab One"
+
+msgid "Get Started"
+msgstr "Get Started"
+
+msgid "Welcome to Ionic"
+msgstr "Welcome to Ionic"
+
+msgid "Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps."
+msgstr "Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps."
+
+msgid "Resources"
+msgstr "Resources"
+
+msgid "Ionic Documentation"
+msgstr "Ionic Documentation"
+
+msgid "Change Your App Layout"
+msgstr "Change Your App Layout"
+
+msgid "Theme Your App"
+msgstr "Theme Your App"
+
+#tab two
+msgid "Tab Two"
+msgstr "Tab Two"
+
+msgid "Basic Services"
+msgstr "Basic Services"
+
+msgid "Internationalization"
+msgstr "Internationalization"
+
+msgid "Test Page"
+msgstr "Test Page"
+
+#tab three
+msgid "Tab Three"
+msgstr "Tab Three"

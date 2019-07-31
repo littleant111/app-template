@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-import { LoggerService } from '../services/logger/logger.service'
 import { LanguageService } from '../services/language/language.service';
-import { TranslateService } from '@ngx-translate/core';
-import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -11,30 +7,19 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  public currentLang: string;
 
   constructor(
-    private logger: LoggerService,
     private language: LanguageService,
-    private translate: TranslateService,
-    private menu: MenuController
-  ) {
-
+  ) { 
+    this.currentLang = this.language.getCurrent();
   }
 
-  ngOnInit(): void {
-    this.testLogger()
+  ionViewWillEnter(){
   }
-  testLogger() {
-    this.logger.debug('test logger: success!', this.translate.instant('Wallet'));
-  }
-
-  ChangeLanguage() {
-    let currentLang = this.language.getCurrent();
-    currentLang == 'zh' ? this.language.set('en') : this.language.set('zh');
-  }
-
-  private openSideMenu() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
+  
+  changeLanguage() {
+    this.currentLang == 'zh' ? this.language.set('en') : this.language.set('zh');
+    this.currentLang = this.language.getCurrent();
   }
 }
