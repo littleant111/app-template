@@ -10,7 +10,7 @@ import { LocalStorage } from './storage/local-storage';
 
 const Keys = {
   APP_IDENTITY: network => 'appIdentity-' + network,
-  CONFIG: 'config',
+  APPCONFIG: 'appConfig',
   PROFILE: 'profile',
 };
 
@@ -51,15 +51,15 @@ export class PersistenceService {
   }
 
   getConfig() {
-    return this.storage.get(Keys.CONFIG);
+    return this.storage.get(Keys.APPCONFIG);
   }
 
   storeConfig(config: object) {
-    return this.storage.set(Keys.CONFIG, config);
+    return this.storage.set(Keys.APPCONFIG, config);
   }
 
   clearConfig() {
-    return this.storage.remove(Keys.CONFIG);
+    return this.storage.remove(Keys.APPCONFIG);
   }
 
   storeProfile(profile): Promise<void> {

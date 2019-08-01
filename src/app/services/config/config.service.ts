@@ -68,6 +68,7 @@ export class ConfigService {
   public load() {
     return new Promise((resolve, reject) => {
       this.persistence.getConfig().then((config: Config) => {
+        console.log('config',config);
         if(!_.isEmpty(config)) {
           this.configCache = _.clone(config);
           this.backwardCompatibility();
@@ -87,6 +88,22 @@ export class ConfigService {
     const lockMethod = config && config.appLock ? config.appLock.method : null;
     const currentlang = config && config.settings.defaultLang ? config.settings.defaultLang : null;
     this.logger.debug('Config: ' + 'currentlang: ' + currentlang + ' - lockMethod: ' + lockMethod);
+  }
+
+  /**
+   * @param newOpts object or string (JSON)
+   */
+  public set(newOpts) {
+    const config = _.cloneDeep(this.configDefault);
+
+    if (_.isString(newOpts)) {
+      newOpts = JSON.parse(newOpts);
+    }
+    _.merge(config, this.configCache, newOpts);
+    this.configCache = config;
+    this.persistence.storeConfig(this.configCache).then(() => {
+      this.logger.info('Config saved');
+    });
   }
 
   public get(): Config {

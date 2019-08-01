@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import {
   // MissingTranslationHandler,
@@ -20,6 +18,7 @@ import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NativeModule } from './services/native.module';
 import { CopyToClipboardDirective } from './directives/copy-to-clipboard/copy-to-clipboard.directive';
 
 // Read translation files
@@ -47,6 +46,7 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
   declarations: [AppComponent, CopyToClipboardDirective],
   entryComponents: [],
   imports: [
+    NativeModule,
     BrowserModule,
     IonicModule.forRoot(), 
     AppRoutingModule,
@@ -63,8 +63,7 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
   ],
   providers: [
     TranslateService,
-    StatusBar,
-    SplashScreen,
+    // NativeModule,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

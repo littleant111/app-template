@@ -4,6 +4,7 @@ import { LoggerService } from '../logger/logger.service';
 
 import * as _ from 'lodash';
 import * as moment from 'moment';
+import { ConfigService } from '../config/config.service';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,8 @@ export class LanguageService {
 
   constructor(
     private translate: TranslateService,
-    private logger: LoggerService
+    private logger: LoggerService,
+    private config: ConfigService
   ) {
     this.logger.info('Language service initialized');
     this.translate.onLangChange.subscribe(event => {
@@ -32,8 +34,7 @@ export class LanguageService {
   }
 
   public load() {
-    // let lang = this.configProvider.get().wallet.settings.defaultLanguage;
-    let lang = 'zh'
+    let lang = this.config.get().settings.defaultLang;
     if (!_.isEmpty(lang)) this.current = lang;
     else {
       // Get from browser
@@ -49,10 +50,10 @@ export class LanguageService {
     this.current = lang;
     this.translate.setDefaultLang(lang);
     this.translate.use(lang);
-    // moment.locale(lang);
-    // this.configProvider.set({
-    //   wallet: { settings: { defaultLanguage: lang } }
-    // });
+    moment.locale(lang);
+    this.config.set({
+      settings: { defaultLang: lang }
+    });
   }
 
   public getName(lang: string): string {
