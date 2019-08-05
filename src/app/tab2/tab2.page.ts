@@ -19,7 +19,6 @@ export class Tab2Page {
     private language: LanguageService,
     private translate: TranslateService,
     private menu: MenuController,
-    private router: Router
   ) {
   }
   
@@ -32,7 +31,7 @@ export class Tab2Page {
   }
 
   testLogger() {
-    this.logger.debug('test logger: success!', this.translate.instant('Wallet'));
+    // this.logger.debug('test logger: success!', this.translate.instant('Wallet'));
   }
 
   changeLanguage() {
@@ -43,14 +42,6 @@ export class Tab2Page {
   public openSideMenu() {
     this.menu.enable(true, 'custom');
     this.menu.open('custom');
-  }
-
-  public jumpToInternationlization() {
-    this.router.navigate(['internationalization'], {
-      'queryParams': {
-        'val': 'this is a param from router.'
-      }
-    })
   }
 
   public testPress($event) {

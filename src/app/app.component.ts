@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { LanguageService } from './services/language/language.service';
-import { ConfigService } from './services/config/config.service';
+import { ConfigService, Config } from './services/config/config.service';
 import { PersistenceService } from './services/persistence/persistence.service';
 
 @Component({
@@ -34,7 +34,9 @@ export class AppComponent {
 
   private async loadProviders() {
     this.persistence.load();
-    await this.config.load();
+    await this.config.load().then((conf: Config) => {
+      document.body.style.setProperty('--ion-font-family', conf.settings.font);
+    });
     this.language.load();
   }
 

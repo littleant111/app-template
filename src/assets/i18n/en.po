@@ -48,8 +48,8 @@ msgstr "Tab Two"
 msgid "Basic Services"
 msgstr "Basic Services"
 
-msgid "Internationalization"
-msgstr "Internationalization"
+msgid "Settings Options"
+msgstr "Settings Options"
 
 msgid "Test Page"
 msgstr "Test Page"
@@ -62,9 +62,15 @@ msgstr "Tab Three"
 msgid "Test"
 msgstr "Test"
 
-#page internationlization
+#page settings
+msgid "Settings"
+msgstr "Settings"
+
 msgid "Select Language"
 msgstr "Select Language"
+
+msgid "Select Font"
+msgstr "Select Font"
 
 #ion-select
 msgid "Okay"
@@ -72,3 +78,10 @@ msgstr "Okay"
 
 msgid "Dismiss"
 msgstr "Dismiss"
+
+#ion-alert
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Cancel"
+msgstr "Cancel"

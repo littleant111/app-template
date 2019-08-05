@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab2" text="{{ 'Back' | translate }}"></ion-back-button>
     </ion-buttons>
-    <ion-title translate>Internationalization</ion-title>
+    <ion-title translate>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,6 +14,16 @@
     <ion-select [value]="currentLang" okText="{{ 'Okay' | translate }}" cancelText="{{ 'Dismiss' | translate }}" interface="alert" mode="ios" (ionChange)="selectLang($event)">
       <ion-select-option value="zh">中文(简体)</ion-select-option>
       <ion-select-option value="en">English</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item lines="inset">
+    <ion-icon slot="start" src="assets/img/selectfont.svg"></ion-icon>
+    <ion-label translate>Select Font</ion-label>
+    <ion-select [value]="currentFont" okText="{{ 'Okay' | translate }}" cancelText="{{ 'Dismiss' | translate }}" interface="alert" mode="ios" (ionChange)="selectFont($event)">
+      <ion-select-option value="zhankugaoduanheiti">高端黑体</ion-select-option>
+      <ion-select-option value="zhankukuaileti">快乐体</ion-select-option>
+      <ion-select-option value="zhankuwenyiti">文艺体</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-content>

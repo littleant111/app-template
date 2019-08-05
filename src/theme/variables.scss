@@ -75,7 +75,40 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+  --ion-font-family: 'zhankuwenyiti';
 }
+
+@font-face {
+  font-family: 'zhankuwenyiti';
+  src: url(../assets/fonts/zhankuwenyiti.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'zhankugaoduanheiti';
+  src: url(../assets/fonts/zhankugaoduanheiti.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'zhankukuaileti';
+  src: url(../assets/fonts/zhankukuaileti.ttf) format('truetype');
+}
+
+$colors: (
+  primary: var(--ion-color-primary),
+  secondary: var(--ion-color-secondary),
+  tertiary: #7044ff,
+  warning: #ffce00,
+  danger: #f04141,
+  success: #10dc60,
+  info: #5476eb,
+  light: #f4f5f8,
+  blank: #fff,
+  dark: #222428,
+  grey: #667,
+  light-grey: #9b9bab,
+  lighter-grey: #eee,
+  error: #e56c7b
+);
 
 /* Set text color of the entire app for iOS only */
 .ios {

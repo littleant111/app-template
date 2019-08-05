@@ -50,8 +50,8 @@ msgstr "貳"
 msgid "Basic Services"
 msgstr "基础服务"
 
-msgid "Internationalization"
-msgstr "国际化"
+msgid "Settings Options"
+msgstr "配置选项"
 
 msgid "Test Page"
 msgstr "测试页面"
@@ -64,9 +64,15 @@ msgstr "叁"
 msgid "Test"
 msgstr "测试"
 
-#page internationlization
+#page settings
+msgid "Settings"
+msgstr "设置"
+
 msgid "Select Language"
 msgstr "选择语言"
+
+msgid "Select Font"
+msgstr "选择字体"
 
 #ion-select
 msgid "Okay"
@@ -74,3 +80,10 @@ msgstr "好的"
 
 msgid "Dismiss"
 msgstr "否"
+
+#ion-alert
+msgid "Ok"
+msgstr "还行"
+
+msgid "Cancel"
+msgstr "取消"

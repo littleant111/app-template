@@ -9,6 +9,7 @@ export interface Config {
     defaultLang: string;
     theme: string;
     color: string;
+    font: string;
   }
 
   download: {
@@ -45,6 +46,7 @@ export class ConfigService {
         defaultLang: 'zh',
         theme: 'primary',
         color: '',
+        font: 'zhankuwenyiti'
       },
     
       download: {
@@ -68,7 +70,6 @@ export class ConfigService {
   public load() {
     return new Promise((resolve, reject) => {
       this.persistence.getConfig().then((config: Config) => {
-        console.log('config',config);
         if(!_.isEmpty(config)) {
           this.configCache = _.clone(config);
           this.backwardCompatibility();
@@ -76,7 +77,7 @@ export class ConfigService {
           this.configCache = _.clone(this.configDefault);
         }
         this.logImportantConfig(this.configCache);
-        return resolve()
+        return resolve(this.configCache);
       }).catch(err => {
         this.logger.error('Error Loading Config');
         return reject(err)
@@ -124,6 +125,9 @@ export class ConfigService {
     }
     if(!this.configCache.settings.color) {
       this.configCache.settings.color = this.configDefault.settings.color;      
+    }
+    if(!this.configCache.settings.font) {
+      this.configCache.settings.font = this.configDefault.settings.font;      
     }
     if(!this.configCache.download.apk) {
       this.configCache.download.apk = this.configDefault.download.apk;      

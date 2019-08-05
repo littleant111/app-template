@@ -1,12 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+      <ion-back-button defaultHref="/tabs/tab2" text="{{ 'Back' | translate }}"></ion-back-button>
     </ion-buttons>
     <ion-title translate>Test</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-button shape="round" file="outline" (click)="testAlert()">alert</ion-button>
+  <ion-button shape="round" file="outline" (click)="testConfirm()">confirm</ion-button>
+  <ion-item lines="inset">
+    <ion-label translate>Select Font</ion-label>
+    <ion-select [value]="currentFont" okText="{{ 'Okay' | translate }}" cancelText="{{ 'Dismiss' | translate }}" interface="alert" mode="ios" (ionChange)="selectFont($event)">
+      <ion-select-option value="zhankugaoduanheiti">高端黑体</ion-select-option>
+      <ion-select-option value="zhankukuaileti">快乐体</ion-select-option>
+      <ion-select-option value="zhankuwenyiti">文艺体</ion-select-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
