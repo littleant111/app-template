@@ -12,10 +12,10 @@ export class Tab1Page {
   constructor(
     private language: LanguageService,
   ) { 
-    this.currentLang = this.language.getCurrent();
   }
-
+  
   ionViewWillEnter(){
+    this.currentLang = this.language.getCurrent();
   }
   
   changeLanguage() {

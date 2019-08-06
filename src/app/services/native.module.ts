@@ -5,6 +5,7 @@ import { Device } from '@ionic-native/device/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 @NgModule({
     providers: [
@@ -12,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
         File,
         SplashScreen,
         StatusBar,
+        AndroidPermissions
     ]
 })
 

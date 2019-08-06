@@ -26,9 +26,16 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then((readySource) => {
-      this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.loadProviders();
+      if(this.platform.is('cordova')) {
+        this.statusBar.show();
+        this.statusBar.styleLightContent(); // 基础主题样式
+        this.statusBar.backgroundColorByHexString('#2c3d51');
+        setTimeout(() => {
+          this.splashScreen.hide();
+        }, 1000)
+      }
     });
   }
 

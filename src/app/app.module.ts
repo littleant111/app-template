@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativeModule } from './services/native.module';
 import { CopyToClipboardDirective } from './directives/copy-to-clipboard/copy-to-clipboard.directive';
+import { ListComponent } from './components/list/list.component';
 
 // Read translation files
 export function transalteLoaderFactory(http: HttpClient) {
@@ -43,7 +44,7 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
 // }
 
 @NgModule({
-  declarations: [AppComponent, CopyToClipboardDirective],
+  declarations: [AppComponent, CopyToClipboardDirective, ListComponent],
   entryComponents: [],
   imports: [
     NativeModule,
