@@ -20,9 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativeModule } from './services/native.module';
 import { CopyToClipboardDirective } from './directives/copy-to-clipboard/copy-to-clipboard.directive';
-import { ListComponent } from './components/list/list.component';
 
-// Read translation files
+/* Read translation files */
 export function transalteLoaderFactory(http: HttpClient) {
   return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
 }
@@ -44,7 +43,10 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
 // }
 
 @NgModule({
-  declarations: [AppComponent, CopyToClipboardDirective, ListComponent],
+  declarations: [
+    AppComponent, 
+    CopyToClipboardDirective,
+  ],
   entryComponents: [],
   imports: [
     NativeModule,
@@ -84,8 +86,8 @@ export class AppModule {}
 // 7、复制粘贴 👌
 // 8、自适应
 // 9、手势
-// 10、跳转第三方网页或app
-// 11、弹出框
+// 10、跳转第三方网页或app 👌
+// 11、弹出框 👌
 // 12、版本更新
 // 13、消息推送
 // 14、应用锁
@@ -97,9 +99,9 @@ export class AppModule {}
 // 20、picker
 // 21、获取设备信息 👌
 // 22、分享
-// 23、设置模块
+// 23、设置模块 👌
 // 24、下载模块
-// 25、第三方字体、样式和icon
+// 25、第三方字体、样式和icon 👌
 // 26、debug模块 👌
 // 27、进度提示模块
 // 28、平台模块  👌

@@ -1,0 +1,32 @@
+<div class="sk-spinner" [ngSwitch]="spinnerType">
+  <div *ngSwitchCase="'spinner-1'" class="spinner-1">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+
+  <div *ngSwitchCase="'folding-cube'" class="sk-folding-cube">
+    <div class="sk-cube-1 sk-cube"></div>
+    <div class="sk-cube-2 sk-cube"></div>
+    <div class="sk-cube-4 sk-cube"></div>
+    <div class="sk-cube-3 sk-cube"></div>
+  </div>
+
+  <div *ngSwitchCase="'cube-grid'" class="sk-cube-grid">
+    <div class="sk-cube0 sk-cube1"></div>
+    <div class="sk-cube0 sk-cube2"></div>
+    <div class="sk-cube0 sk-cube3"></div>
+    <div class="sk-cube0 sk-cube4"></div>
+    <div class="sk-cube0 sk-cube5"></div>
+    <div class="sk-cube0 sk-cube6"></div>
+    <div class="sk-cube0 sk-cube7"></div>
+    <div class="sk-cube0 sk-cube8"></div>
+    <div class="sk-cube0 sk-cube9"></div>
+  </div>
+
+  <div *ngSwitchDefault>spinning!</div>
+</div>
+
+
