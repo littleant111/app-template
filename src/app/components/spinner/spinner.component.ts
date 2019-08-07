@@ -10,11 +10,11 @@ export class SpinnerComponent implements OnInit {
   spinnerType: string;
 
   constructor() {
-    console.log('this.spinnerType1', this.spinnerType)
+
   }
 
   ngOnInit() {
-    console.log('this.spinnerType2', this.spinnerType)
+
   }
 
 }

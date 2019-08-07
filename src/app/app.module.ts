@@ -2,8 +2,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { MarkdownModule } from 'ngx-markdown'
 
 import {
   // MissingTranslationHandler,
@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativeModule } from './services/native.module';
 import { CopyToClipboardDirective } from './directives/copy-to-clipboard/copy-to-clipboard.directive';
+import { ExternalizeLinksDirective } from './directives/externalize-links/externalize-links.directive';
 
 /* Read translation files */
 export function transalteLoaderFactory(http: HttpClient) {
@@ -45,7 +46,8 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
 @NgModule({
   declarations: [
     AppComponent, 
-    CopyToClipboardDirective,
+    CopyToClipboardDirective, 
+    ExternalizeLinksDirective,
   ],
   entryComponents: [],
   imports: [
@@ -54,6 +56,7 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
     IonicModule.forRoot(), 
     AppRoutingModule,
     HttpClientModule,
+    MarkdownModule.forRoot(),
     TranslateModule.forRoot({
       parser: { provide: TranslateParser, useFactory: translateParserFactory },
       // missingTranslationHandler: { provide: MissingTranslationHandler, useFactory: MyMissingTranslationHandler },

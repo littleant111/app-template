@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { TestPage } from './test.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { MarkdownModule } from 'ngx-markdown';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
     IonicModule,
     TranslateModule,
     ComponentsModule,
+    MarkdownModule,
     RouterModule.forChild(routes)
   ],
   declarations: [TestPage]

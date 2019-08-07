@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MarkdownComponent } from 'ngx-markdown';
 import { AlertService } from 'src/app/services/alert/alert.service';
 import { ConfigService } from 'src/app/services/config/config.service';
 
@@ -9,9 +10,14 @@ import { ConfigService } from 'src/app/services/config/config.service';
 })
 export class TestPage implements OnInit {
   public currentFont: string;
+  public link: string;
+
+  @ViewChild(MarkdownComponent)
+  markdown: MarkdownComponent;
 
   constructor(private alertService: AlertService, private config: ConfigService) {
     this.currentFont = this.config.get().settings.font;
+    this.link = 'https://code.yidianchaxun.com';
   }
 
   ngOnInit() {
