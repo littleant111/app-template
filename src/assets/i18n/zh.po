@@ -87,3 +87,10 @@ msgstr "还行"
 
 msgid "Cancel"
 msgstr "取消"
+
+#service download
+msgid "Note!"
+msgstr "操作提醒"
+
+msgid "Note-content"
+msgstr "由于部分手机出现异常,请您进入手机设置-应用管理，将该APP存储权限打开后再进行升级，由此给您带来的不便，敬请谅解。"

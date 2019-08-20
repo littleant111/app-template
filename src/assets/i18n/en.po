@@ -85,3 +85,11 @@ msgstr "Ok"
 
 msgid "Cancel"
 msgstr "Cancel"
+
+
+#service download
+msgid "Note!"
+msgstr "Note!"
+
+msgid "Note-content"
+msgstr "Due to the abnormality of some mobile phones, please enter the mobile phone settings - application management, open the APP storage permissions and then upgrade, which will bring you inconvenience, please understand."
