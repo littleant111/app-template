@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DownloadService } from './download.service';
+import { TransferService } from './transfer.service';
 
-describe('DownloadService', () => {
+describe('TransferService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: DownloadService = TestBed.get(DownloadService);
+    const service: TransferService = TestBed.get(TransferService);
     expect(service).toBeTruthy();
   });
 });

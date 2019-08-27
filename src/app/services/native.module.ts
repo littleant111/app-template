@@ -9,6 +9,8 @@ import { FileChooser } from '@ionic-native/file-chooser/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { AppUpdate } from '@ionic-native/app-update/ngx';
+import { AppVersion } from '@ionic-native/app-version/ngx';
 
 @NgModule({
     providers: [
@@ -20,6 +22,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
         FileTransfer,
         FileOpener,
         FileChooser,
+        AppUpdate,
+        AppVersion
     ]
 })
 

@@ -16,6 +16,7 @@ export interface Config {
     apk: {
       url: string;
     };
+    updateUrl: string;
   };
 
   appLock: {
@@ -26,6 +27,12 @@ export interface Config {
 
   api: {
     url: string;
+  };
+
+  appInfo: {
+    appName: string;
+    versionCode: number;
+    versionNumber: string;
   }
 }
 
@@ -51,8 +58,9 @@ export class ConfigService {
     
       download: {
         apk: {
-          url: '',
+          url: 'https://lianxicommunity.oss-cn-beijing.aliyuncs.com/wallet/MyApp.apk',
         },
+        updateUrl: 'https://lianxicommunity.oss-cn-beijing.aliyuncs.com/wallet/ionic-download.xml'
       },
     
       appLock: {
@@ -63,6 +71,12 @@ export class ConfigService {
     
       api: {
         url: '',
+      },
+
+      appInfo: {
+        appName: 'MyApp',
+        versionCode: 1,
+        versionNumber: '0.0.1'
       }
     }
   }

@@ -20,7 +20,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativeModule } from './services/native.module';
 import { CopyToClipboardDirective } from './directives/copy-to-clipboard/copy-to-clipboard.directive';
-import { ExternalizeLinksDirective } from './directives/externalize-links/externalize-links.directive';
 
 /* Read translation files */
 export function transalteLoaderFactory(http: HttpClient) {
@@ -47,7 +46,6 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
   declarations: [
     AppComponent, 
     CopyToClipboardDirective, 
-    ExternalizeLinksDirective,
   ],
   entryComponents: [],
   imports: [

@@ -1,57 +1,79 @@
 import { Injectable } from '@angular/core';
-import { Mode } from '@ionic/core';
+import { AlertInput, Mode, AlertButton } from '@ionic/core';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { LoggerService } from '../logger/logger.service';
 
+export interface AlertOpts {
+  title?: string;
+  subTitle?: string;
+  okText?: string; 
+  cancelText?: string; 
+  message?: string;
+  cssClass?: string | string[];
+  inputs?: AlertInput[];
+  buttons?: (string | AlertButton)[];
+  backdropDismiss?: boolean;
+  translucent?: boolean;
+  animated?: boolean;
+  mode?: Mode;
+  keyboardClose?: boolean;
+  id?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class AlertService {
 
-  constructor(private alertCtrl: AlertController, private logger: LoggerService, private translate: TranslateService) { 
+  constructor(
+    private alertCtrl: AlertController, 
+    private logger: LoggerService, 
+    private translate: TranslateService
+  ) { 
 
   }
 
-  public alert(title: string, message: string, subTitle?: string, okText?: string, mode?: Mode): Promise<any> {
+  public alert(opts: AlertOpts): Promise<any> {
     return new Promise(async (resolve) => {
       const alert = await this.alertCtrl.create({
-        'header': title,
-        'subHeader': subTitle,
-        'message': message,
+        'header': opts.title,
+        'subHeader': opts.subTitle,
+        'message': opts.message,
         'cssClass': '',
         'buttons': [
           {
-            text: okText ? okText : this.translate.instant('Ok'),
+            text: opts.okText ? opts.okText : this.translate.instant('Ok'),
             handler: () => {
               this.logger.info('Ok clicked');
               resolve(true);
             }
           },
         ],
-        'mode': mode
+        'mode': opts.mode
       });
       await alert.present()
     })
   }
 
-  public confirm(title: string, message: string, subTitle?: string, okText?: string, cancelText?: string, mode?: Mode): Promise<any> {
+  public confirm(opts: AlertOpts): Promise<any> {
     return new Promise(async resolve => {
       let confirm = await this.alertCtrl.create({
-        'header': title,
-        'message': message,
-        'subHeader': subTitle,
+        'header': opts.title,
+        'message': opts.message,
+        'subHeader': opts.subTitle,
         'cssClass': '',
         'buttons': [
           {
-            text: cancelText ? cancelText : this.translate.instant('Cancel'),
+            text: opts.cancelText ? opts.cancelText : this.translate.instant('Cancel'),
             handler: () => {
               this.logger.info('Disagree clicked');
               resolve(false);
             }
           },
           {
-            text: okText ? okText : this.translate.instant('Ok'),
+            text: opts.okText ? opts.okText : this.translate.instant('Ok'),
             handler: () => {
               this.logger.info('Agree clicked');
               resolve(true);
@@ -59,7 +81,7 @@ export class AlertService {
           }
         ],
         'backdropDismiss': false,
-        'mode': mode
+        'mode': opts.mode
       });
       await confirm.present();
     });
@@ -77,6 +99,7 @@ export class AlertService {
       let enableBackdropDismiss = !!(opts && opts.enableBackdropDismiss);
 
       let prompt = await this.alertCtrl.create({
+        'mode': 'ios',
         'header': title,
         'message': message,
         'cssClass': cssClass,

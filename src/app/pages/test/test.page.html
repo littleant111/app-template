@@ -19,15 +19,6 @@
     </ion-select>
   </ion-item>
 
-  <!-- <ion-img src="/assets/img/shapes.svg"></ion-img> -->
-  <!-- <ion-card>
-    <img src="/assets/shapes.svg" />
-    <ion-card-header>
-      <ion-card-title>title</ion-card-title>
-      <ion-card-subtitle>subtitle</ion-card-subtitle>
-    </ion-card-header>
-  </ion-card> -->
-
   <ion-card>
     <div><ion-img src="/assets/shapes.svg"></ion-img></div>
     <ion-card-header>
@@ -39,15 +30,8 @@
     </ion-card-content>
   </ion-card>
 
-  <!-- <ion-spinner></ion-spinner> -->
-
-  <!-- <div class="spinner-1">
-    <div class="rect1"></div>
-    <div class="rect2"></div>
-    <div class="rect3"></div>
-    <div class="rect4"></div>
-    <div class="rect5"></div>
-  </div> -->
+  <ion-button shape="round" file="outline" (click)="getAppInfo()">app info</ion-button>
+  <ion-button shape="round" file="outline" (click)="updateApp()">update app</ion-button>
 
   <app-spinner spinnerType="folding-cube"></app-spinner>
   <app-spinner spinnerType="spinner-1"></app-spinner>
@@ -55,7 +39,4 @@
   <app-spinner spinnerType="double-bounce"></app-spinner>
   <app-spinner></app-spinner>
 
-  <div markdown [data]="link" appExternalizeLinks>this is a div.</div>
-
-  <markdown class="terms" [data]="link" appExternalizeLinks></markdown>
 </ion-content>
