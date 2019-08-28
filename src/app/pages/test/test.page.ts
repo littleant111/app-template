@@ -19,7 +19,7 @@ export class TestPage implements OnInit {
   constructor(
     private alertService: AlertService, 
     private config: ConfigService,
-    private transfer: TransferService
+    private transfer: TransferService,
   ) {
     this.currentFont = this.config.get().settings.font;
     this.link = 'https://code.yidianchaxun.com';
@@ -61,4 +61,5 @@ export class TestPage implements OnInit {
   public updateApp() {
     this.transfer.updateApp()
   }
+
 }

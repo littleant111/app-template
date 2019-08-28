@@ -15,6 +15,7 @@ export class PlatformService {
   public ua: string;
   public isMobile: boolean;
   public isDevel: boolean;
+  public platform_native: Platform;
 
   constructor(
     private device: Device,

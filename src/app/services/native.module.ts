@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { AppUpdate } from '@ionic-native/app-update/ngx';
 import { AppVersion } from '@ionic-native/app-version/ngx';
+import { BackgroundMode } from '@ionic-native/background-mode/ngx';
+import { JPush } from '@jiguang-ionic/jpush/ngx'
 
 @NgModule({
     providers: [
@@ -23,7 +25,9 @@ import { AppVersion } from '@ionic-native/app-version/ngx';
         FileOpener,
         FileChooser,
         AppUpdate,
-        AppVersion
+        AppVersion,
+        JPush,
+        BackgroundMode
     ]
 })
 

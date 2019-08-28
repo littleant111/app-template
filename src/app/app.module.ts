@@ -75,7 +75,7 @@ export class InterpolatedTranslateParser extends TranslateDefaultParser {
 export class AppModule {}
 
 
-
+// 应用签名：3e8a3f02d5bf3bb84ff551af3f8117a8
 
 // 基础功能：
 // 1、storage 👌
@@ -89,7 +89,7 @@ export class AppModule {}
 // 9、手势
 // 10、跳转第三方网页或app 👌
 // 11、弹出框 👌
-// 12、版本更新
+// 12、版本更新 👌 (not ios)
 // 13、消息推送
 // 14、应用锁
 // 15、单位换算
